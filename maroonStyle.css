@@ -1,0 +1,263 @@
+body {
+    background-color: rgb(233,228,222);
+  }
+  
+  #myBtn {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: black; /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+      background-color: #555; /* Add a dark-grey background on hover */
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    display:block;
+  }
+  
+  h2 {
+    text-align:center;
+  }
+  
+  section {
+    margin-top:50px;
+    margin-bottom:50px;
+  }
+  
+  header img {
+    width:100%;
+  }
+  
+  nav{
+    margin-top: 10px;
+    text-align:center;
+    width:100%;
+    /*background-color:green;*/
+  }
+  nav>ul>li {
+    display:inline-block;
+    padding: 10px 5px 10px 5px;
+    /* border: solid red;*/
+  }
+  
+  nav>ul>li>a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+  }
+  
+  nav li {
+    position:relative;
+  }
+  
+  a:hover{
+    color:black;
+    text-decoration:none;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width:0%;
+    opacity:0;
+    background-color:
+  #ee3341;
+    
+    position:absolute;
+    transition: all ease-in-out 350ms;
+    
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+    opacity:1;
+    
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  #history {
+    margin: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  
+  
+  .card-body {
+    height: 150px;
+  }
+  .card-img-top {
+    height:270px;
+  }
+  
+  /* entire container, keeps perspective */
+  .flip-container {
+      perspective: 1000px;
+      display:inline-block;
+  }
+      /* flip the pane when hovered */
+      .flip-container:hover .flipper, .flip-container.hover .flipper {
+          transform: rotateY(180deg);
+      }
+  
+  .flip-container, .front, .back {
+    width: 300px;
+      height: 400px;
+    margin-bottom:40px;
+  
+  }
+  
+  /* flip speed goes here */
+  .flipper {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+  
+      position: relative;
+  }
+  
+  /* hide back of pane during swap */
+  .front, .back {
+      backface-visibility: hidden;
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
+  /* front pane, placed above back */
+  .front {
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+  }
+  
+  /* back, initially hidden pane */
+  .back {
+      transform: rotateY(180deg);
+    overflow-y:scroll;
+  
+  }
+  
+  .back>.card{
+    padding:10px;
+    font-size:1em;
+      background-color:black;
+    color:white;
+  }
+  
+  
+  .rounded-circle{
+    height:300px;
+    width:300px;
+  }
+  
+  #band {
+    margin: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  
+  .imgWrap {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .imgWrap p{
+    position:absolute;
+    font-weight:bold;
+    font-size:1.5rem;
+    opacity:0;
+  }
+  
+  .rounded-circle:hover{
+    opacity:0.2;
+  }
+  
+  .imgWrap:hover p{
+    opacity:1;
+  }
+  
+  #disco {
+    margin: 50px 10px 50px 10px;
+    padding: 0 20px 0 20px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .w3-display-container{
+    height: 500px;
+    width:500px;
+  }
+  
+  
+  .myDisco{
+    max-height: 500px;
+    max-width:500px;
+  }
+  
+  .mySlides:hover img{
+    opacity:0.2;
+  }
+  
+  
+  .mySlides> .songList {
+    background-color: rgba(255,255,255,0);
+    position:absolute;
+    width:100%;
+    height:500px;
+    padding:35px;
+    font-weight:bold;
+    font-size:1.5rem;
+    opacity:0;
+  }
+  
+  
+  .mySlides:hover .songList{
+    background: rgba (255,255,255,1);
+    opacity: 1;
+  }
+  
+  .songList li {
+    font-size:1rem;
+  }
+  
+  #end {
+    height:200px;
+    margin: 50px 10px 50px 10px;
+    padding: 0 20px 0 20px;
+    background-color:rgba(137,131,108,0.7);
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:25px;
+  }
+  
+  #end a:hover{
+    color:white;
+  }
